@@ -1,0 +1,30 @@
+.root {
+  background-color: var(--giftBackgroundColor);
+  width: 340px;
+  height: 90px;
+  margin-top: -90px;
+  z-index: 2;
+}
+
+.giftWrap::before {
+  content: '';
+  margin: auto;
+  display: block;
+  width: 50px;
+  height: 90px;
+  background-color: var(--giftStripeColor);
+}
+
+.giftWrap::after {
+  content: '';
+  width: 5px;
+  height: 0;
+  display: block;
+  border-bottom: 60px solid var(--giftStripeColor);
+  border-top: 60px solid var(--giftStripeColor);
+  border-left: 0px solid transparent;
+  border-right: 60px solid transparent;
+  margin: auto;
+  transform: rotate(-90deg);
+  margin-top: -30 - 90 - 60px;
+}
