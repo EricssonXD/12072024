@@ -5,6 +5,17 @@
   background-color: #000000;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
 }
+
 .presentBox {
+  position: fixed;
+  bottom: 50px;
+  left: calc(50% - 150px);
+  overflow: visible;
+  z-index: 100;
+}
+
+.photoCard {
+  position: absolute;
 }

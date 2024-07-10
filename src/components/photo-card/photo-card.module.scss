@@ -1,2 +1,17 @@
 .root {
+  // overflow: hidden;
+  padding: 5px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  background-color: #ffffff;
+  line-height: 0;
+  // transform: translate(-50%, -50%);
+}
+
+.image {
+  border-radius: 5px;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
 }

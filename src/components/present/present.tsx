@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import styles from './present.module.scss';
 import { PresentBox } from '../present-box/present-box';
 import { PresentLid } from '../present-lid/present-lid';
-import { motion, transform, useAnimation } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
 import { useEffect } from 'react';
 import { appState } from '../../global/app-state/app-state';
 import { observer } from 'mobx-react-lite';
@@ -54,9 +54,16 @@ export const Present = ({ className }: PresentProps) => {
             >
                 <motion.div
                     key={"lid"}
-                    animate={appState.presentOpened ? { transform: "translateY(-300px)" } : {}}
+                    animate={appState.presentOpened ?
+                        {
+                            // transform: "translateY(-240px)",
+                            rotate: 180,
+                            x: [0, 500],
+                            y: [0, -100, 200],
+                        }
+                        : {}}
                     transition={{
-                        duration: 0.5, ease: "easeInOut", // Easing function for smoother motion
+                        duration: 0.5, ease: "easeInOut",
                     }}
                 ><PresentLid className={styles.lid} /></motion.div>
                 <PresentBox className={styles.box} />
