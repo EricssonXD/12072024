@@ -10,4 +10,5 @@ export default defineConfig({
             include: '**/*.svg?react',
         }),
     ],
+    base: '12072024'
 });
