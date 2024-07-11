@@ -14,6 +14,12 @@ export class AppState {
         console.log('Present opened')
     }
 
+    closePresent() {
+        if (this.presentOpened === false) return;
+        this.presentOpened = false;
+        console.log('Present closed')
+    }
+
 }
 
 export const appState = new AppState()

@@ -17,7 +17,7 @@ export interface PresentProps {
  */
 
 export const Present = ({ className }: PresentProps) => {
-
+    let onCooldown = false;
     const Observer = observer(() => {
         const controls = useAnimation();
 
@@ -50,7 +50,18 @@ export const Present = ({ className }: PresentProps) => {
                 className={classNames(styles.root, className)}
                 initial={{ y: 0 }}
                 animate={controls}
-                onClick={() => appState.openPresent()} // Toggle the state on click
+                onClick={() => {
+                    if (onCooldown) return;
+                    onCooldown = true;
+                    setTimeout(() => {
+                        onCooldown = false;
+                        console.log("Cooldown ended")
+                    }, 1000);
+
+                    appState.presentOpened ?
+                        appState.closePresent() :
+                        appState.openPresent();
+                }} // Toggle the state on click
             >
                 <motion.div
                     key={"lid"}
@@ -61,11 +72,16 @@ export const Present = ({ className }: PresentProps) => {
                             x: [0, 500],
                             y: [0, -100, 200],
                         }
-                        : {}}
+                        : {
+                            rotate: 0,
+                            x: [500, 0],
+                            y: [200, -100, 0],
+                        }}
                     transition={{
                         duration: 0.5, ease: "easeInOut",
                     }}
-                ><PresentLid className={styles.lid} /></motion.div>
+                ><PresentLid className={styles.lid} />
+                </motion.div>
                 <PresentBox className={styles.box} />
             </motion.div>
         );
