@@ -38,7 +38,8 @@ export const PhotoStack = ({ className, presentCords }: PhotoStackProps) => {
     const keyList = [...Array(imgList.length).keys()];
     let rotateList: number[] = [];
     let translateList: { x: number, y: number }[] = [];
-    const zIndexList = keyList.sort(() => Math.random() - 0.5);
+    let zIndexList = [...Array(imgList.length).keys()].sort(() => Math.random() - 0.5);
+
 
     for (let i = 0; i < keyList.length; i++) {
         let rotation;

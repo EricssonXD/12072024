@@ -1,0 +1,13 @@
+.root {
+    position: fixed;
+    bottom: 0;
+    left: calc(50% - 250px);
+    height: 500px;
+    width: 500px;
+    // background-color: red;
+}
+
+.child {
+    position: absolute;
+    // background-color: rgba(255, 0, 0, 0.5);
+}

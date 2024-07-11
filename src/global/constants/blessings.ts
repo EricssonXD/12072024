@@ -1,4 +1,4 @@
-const Blessings: Array<{ name: string, message: string }> = [
+export const Blessings: Array<{ name: string, message: string }> = [
     {
         name: '頌晞/ 頌安',
         message: '好開心與你共聚嘅日與夜，願主祝福你靈命更豐盛，生日快樂！'
@@ -22,6 +22,29 @@ const Blessings: Array<{ name: string, message: string }> = [
     {
         name: '舜芳',
         message: '祝您40歲生日快樂🎂\n40在聖經裡有很特別的意思，祝福您在主裡有一個新的階段，翻開生命一個新的篇章。\n又感謝主賜您這位小天使，用愛心陪伴這班青年人，願主繼續使用您、引領您，榮耀主名！'
-    }
-
+    },
+    {
+        name: 'Catrina',
+        message: '好感恩神安排咗你成為我哋短宣團嘅一分子，係呢幾日嘅相處，感受到你服侍年輕人嘅熱心，亦願意學習接納並教導一代又一代嘅年輕人。祝福你能夠繼續透過唔同嘅服侍，或者日常生活嘅經歷，被神使用、為神國努力又開心地工作。哈哈哈哈，happy birthday! \nCatrina: D(不可食用）'
+    },
+    {
+        name: 'Rainbow 焯烯',
+        message: '生日快樂🥳多謝你呢幾日嘅照顧同埋教導我哋更多短宣嘅知識，希望你今日同屋企人enjoy today。'
+    },
+    {
+        name: '柏臻',
+        message: '肥仔，40大壽生日快樂！好感恩嚟到台灣有你做我哋傳道人，帶我哋去經歷神嘅安排，令我有好大嘅得着✨🍰🥳'
+    },
+    {
+        name: '周嵐',
+        message: '肥仔生日快樂，祝你可以帶領更多人認識主耶穌，同啟發更多人的生命'
+    },
+    {
+        name: '胡珍',
+        message: '肥仔，生日快樂🎊🎈🎁身心靈健壯💪🏻💪🏻💪🏻很快適應英國🇬🇧的事奉及生活🙏🏻🙏🏻🙏🏻'
+    },
+    {
+        name: '溢睛',
+        message: '生日快樂呀！！！\n很感恩在呢個短宣中認識你\n在你身上我學會了很多\n以馬內利，願下次再係台灣見到你！！'
+    },
 ]
