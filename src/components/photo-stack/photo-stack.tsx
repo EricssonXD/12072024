@@ -16,6 +16,9 @@ import p12 from '../../assets/photos/p12.jpeg';
 import p13 from '../../assets/photos/p13.jpeg';
 import p14 from '../../assets/photos/p14.jpeg';
 import p15 from '../../assets/photos/p15.jpeg';
+import { motion } from 'framer-motion';
+import { observer } from 'mobx-react-lite';
+import { appState } from '../../global/app-state/app-state';
 
 export interface PhotoStackProps {
     className?: string;
@@ -58,15 +61,46 @@ export const PhotoStack = ({ className, presentCords }: PhotoStackProps) => {
 
 
     return <div className={classNames(styles.root, className)}>
-        {keyList.map((key) => (
-            <PhotoCard
-                key={`Photo${key}`}
-                className={styles.child}
-                presentCords={presentCords}
-                translate={translateList[key]}
-                zIndex={zIndexList[key]}
-                img={imgList[key]}
-                rotation={rotateList[key]} />
-        ))}
+        <>
+            {keyList.map((key) => (
+                <PhotoCard
+                    key={`Photo${key}`}
+                    className={styles.child}
+                    presentCords={presentCords}
+                    translate={translateList[key]}
+                    zIndex={zIndexList[key]}
+                    img={imgList[key]}
+                    rotation={rotateList[key]} />
+            ))}
+        </>
+        <BdayText />
     </div>;
 };
+
+const BdayText = observer(() => {
+    return (
+        <motion.div className={styles.birthdayText}
+            initial={{
+                scale: 1,
+                opacity: 0.001,
+                // x: "50%",
+                // y: "0%",
+            }}
+            animate={appState.presentOpened ?
+                {
+                    translateX: [0, 0],
+                    translateY: [0, -200],
+                    // x: "calc(50%)",
+                    y: "calc(50% - 550px)",
+                    scale: [0, 1],
+                    opacity: [1, 1],
+                    zIndex: [0, 0, 50],
+                }
+                : {}}
+            transition={{
+                duration: 1, ease: "easeInOut",
+            }}
+        >肥仔生日快樂！
+        </motion.div>
+    );
+});

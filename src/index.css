@@ -6,6 +6,9 @@
   text-rendering: optimizeLegibility;
   background-color: #000000;
   overflow: hidden;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;

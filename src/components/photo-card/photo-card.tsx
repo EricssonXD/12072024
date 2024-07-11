@@ -54,6 +54,7 @@ export const PhotoCard = ({
                     x: "50%",
                     y: "0%",
                 }}
+
                 animate={appState.presentOpened ?
                     {
                         translateX: [0, 0, translate.x],
