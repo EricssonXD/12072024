@@ -14,7 +14,7 @@ const { ScreenScalerOutOfRangeFallbackProvider } = enableScreenScaler({
 function App() {
     return (
         <ScreenScalerOutOfRangeFallbackProvider
-            fallback={<h1>Please Rotate your phone, this app does not render well in portrait mode.</h1>}
+            fallback={<h1 className={App_module.fallbackText}>Please Rotate your phone, this app does not render well in portrait mode.</h1>}
         >
             <div className={App_module.App} >
                 <PhotoStack />

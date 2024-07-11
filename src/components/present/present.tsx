@@ -78,7 +78,7 @@ export const Present = ({ className }: PresentProps) => {
                             y: [200, -100, 0],
                         }}
                     transition={{
-                        duration: 0.5, ease: "easeInOut",
+                        duration: 0.5, ease: "easeInOut", delay: appState.presentOpened ? 0 : 0.4
                     }}
                 ><PresentLid className={styles.lid} />
                 </motion.div>

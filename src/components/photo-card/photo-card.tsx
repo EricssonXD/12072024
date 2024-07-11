@@ -52,7 +52,7 @@ export const PhotoCard = ({
                     scale: 1,
                     opacity: 0.001,
                     x: "50%",
-                    y: "0%",
+                    y: "calc(0% + 50px)",
                 }}
 
                 animate={appState.presentOpened ?
@@ -60,13 +60,23 @@ export const PhotoCard = ({
                         translateX: [0, 0, translate.x],
                         translateY: [0, -200, translate.y],
                         x: "calc(50% - 25px)",
-                        y: "calc(50% - 400px)",
+                        y: [80, "calc(50% - 400px)"],
                         scale: [0, 1],
                         opacity: [1, 1],
                         rotate: [0, 0, rotation],
                         zIndex: [0, 0, zIndex + 10],
                     }
-                    : {}}
+                    : {
+                        translateX: [translate.x, 0, 0],
+                        translateY: [translate.y, 0],
+                        x: "50%",
+                        y: ["calc(50% - 400px)", 80],
+                        scale: [1, 0],
+                        opacity: [1, 1],
+                        // rotate: [rotation, 0, 0],
+                        zIndex: [zIndex + 10, 0],
+                    }
+                }
                 transition={{
                     duration: 1, ease: "easeInOut",
                 }}

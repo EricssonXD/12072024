@@ -96,7 +96,12 @@ const BdayText = observer(() => {
                     opacity: [1, 1],
                     zIndex: [0, 0, 50],
                 }
-                : {}}
+                : {
+                    translateY: [-200, 0],
+                    y: 0,
+                    scale: [1, 0],
+                    opacity: [1, 1],
+                }}
             transition={{
                 duration: 1, ease: "easeInOut",
             }}

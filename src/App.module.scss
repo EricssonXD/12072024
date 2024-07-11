@@ -16,3 +16,15 @@
 .photoCard {
   position: absolute;
 }
+
+.fallbackText {
+  position: absolute;
+  // color: rgb(255, 170, 0);
+  color: rgba(255, 255, 255, 0.87);
+  text-shadow: 0 0 20px #ff1818, 0 0 30px #ff1818, 0 0 40px #ff1818, 0 0 55px #ff1818, 0 0 75px #ff1818;
+  font-size: 100px;
+  font-weight: bold;
+  // white-space: nowrap;
+  bottom: 0;
+  left: calc(50% - 325px);
+}
