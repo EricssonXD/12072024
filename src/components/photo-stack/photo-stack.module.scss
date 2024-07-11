@@ -1,9 +1,10 @@
 .root {
-    position: relative;
-    // height: 500px;
-    // /* Adjust based on your requirements */
-    // width: 500px;
-    // /* Adjust based on your requirements */
+    position: fixed;
+    bottom: 0;
+    left: calc(50% - 250px);
+    height: 500px;
+    width: 500px;
+    background-color: red;
 }
 
 .child {

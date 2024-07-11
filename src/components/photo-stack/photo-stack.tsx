@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import styles from './photo-stack.module.scss';
 import { PhotoCard, PhotoCardProps } from '../photo-card/photo-card';
-
+import p1 from '../../assets/photos/p1.jpeg';
 export interface PhotoStackProps {
     className?: string;
     presentCords?: { x: number, y: number };
@@ -15,11 +15,12 @@ export interface PhotoStackProps {
 export const PhotoStack = ({ className, presentCords }: PhotoStackProps) => {
 
 
-    const photoList = [...Array(20).keys()];
+    const imgList = [p1,]
+    const keyList = [...Array(imgList.length).keys()];
 
 
     return <div className={classNames(styles.root, className)}>
-        {photoList.map((key) => (
+        {keyList.map((key) => (
             <PhotoCard
                 className={styles.child}
                 presentCords={presentCords}

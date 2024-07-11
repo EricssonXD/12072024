@@ -2,12 +2,14 @@
   margin: 0 auto;
   text-align: center;
   display: flex;
+  height: 100vh;
+  width: 100vw;
 }
 
 .presentBox {
   position: fixed;
   bottom: 50px;
-  left: calc(50% - 150px);
+  left: calc(50% - 170px);
   z-index: 100;
 }
 

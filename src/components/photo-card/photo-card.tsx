@@ -25,7 +25,7 @@ export interface PhotoCardProps {
  */
 export const PhotoCard = ({
     className,
-    dimension = 200,
+    dimension = 250,
     img = TestImgJpg,
     orientation = 'landscape',
     zIndex = 1,
@@ -47,24 +47,23 @@ export const PhotoCard = ({
             <motion.div className={classNames(styles.root, className)}
                 style={{
                     padding: dimension / 20,
-                    // transform: "translate(-50%, -50%)",
                 }}
                 initial={{
                     scale: 1,
-                    x: "calc(50vw - 100px)",
-                    y: "1080",
-                    transformOrigin: "0px 300px",
-                    // zIndex: ,
+                    opacity: 0.001,
+                    x: "50%",
+                    y: "0%",
                 }}
                 animate={appState.presentOpened ?
                     {
                         translateX: [0, 0, translate.x],
                         translateY: [0, -200, translate.y],
-                        x: "calc(50vw - 80px)",
-                        y: "calc(100vh - 600px)",
-                        scale: 1,
+                        x: "50%",
+                        y: "calc(50% - 400px)",
+                        scale: [0, 1],
+                        opacity: [1, 1],
                         rotate: rotation,
-                        // zIndex: zIndex + 10,
+                        zIndex: [0, 0, zIndex + 10],
                     }
                     : {}}
                 transition={{
