@@ -58,11 +58,11 @@ export const PhotoCard = ({
                     {
                         translateX: [0, 0, translate.x],
                         translateY: [0, -200, translate.y],
-                        x: "50%",
+                        x: "calc(50% - 25px)",
                         y: "calc(50% - 400px)",
                         scale: [0, 1],
                         opacity: [1, 1],
-                        rotate: rotation,
+                        rotate: [0, 0, rotation],
                         zIndex: [0, 0, zIndex + 10],
                     }
                     : {}}
