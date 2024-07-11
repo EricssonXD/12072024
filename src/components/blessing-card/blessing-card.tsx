@@ -15,11 +15,12 @@ export interface BlessingCardProps {
  * This component was created using Codux's Default new component template.
  * To create custom component templates, see https://help.codux.com/kb/en/article/kb16522
  */
-export const BlessingCard = ({ className, rotation, translate = { x: 0, y: 0 }, blessing }: BlessingCardProps) => {
+export const BlessingCard = ({ className, rotation, translate = { x: 0, y: 0 }, blessing = { name: "Ericsson", message: 'Hi!' } }: BlessingCardProps) => {
 
     const Observer = observer(() => {
         return (
             <motion.div className={classNames(styles.root, className)}
+                onClick={() => appState.openBlessing(blessing)}
                 style={{
                     zIndex: -1,
                 }}

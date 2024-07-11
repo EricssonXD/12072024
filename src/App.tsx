@@ -5,6 +5,7 @@ import TestImgJpg from './assets/TestImg.jpg';
 import { PhotoStack } from './components/photo-stack/photo-stack';
 import { enableScreenScaler } from "screen-scaler/react";
 import { BlessingCardStack } from './components/blessing-card-stack/blessing-card-stack';
+import { FullScreenBlessing } from './components/full-screen-blessing/full-screen-blessing';
 
 const { ScreenScalerOutOfRangeFallbackProvider } = enableScreenScaler({
     rootDivId: "root",
@@ -22,6 +23,7 @@ function App() {
                 <PhotoStack />
                 <BlessingCardStack />
                 <Present className={App_module.presentBox} />
+                <FullScreenBlessing />
             </div>
         </ScreenScalerOutOfRangeFallbackProvider>
 
