@@ -44,11 +44,22 @@ export const FullScreenBlessing = ({ className }: FullScreenBlessingProps) => {
                         style={{
                             zIndex: 150,
                         }}
+                        initial={{
+                            y: -1000
+                        }
+                        }
+                        animate={
+                            appState.openedBlessing != undefined ?
+                                {
+                                    y: 300
+                                } : {
+                                    y: -1000
+                                }
+                        }
                     >
                         {appState.openedBlessing.message}
                     </motion.div>
                 </>
-
                 : null
         );
     });
