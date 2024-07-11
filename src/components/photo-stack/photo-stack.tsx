@@ -23,8 +23,8 @@ export const PhotoStack = ({ className, presentCords }: PhotoStackProps) => {
             <PhotoCard
                 className={styles.child}
                 presentCords={presentCords}
-                translate={{ x: key * 30, y: 0 }}
-                rotation={5 * key} />
+                // translate={{ x: key * 30, y: 0 }}
+                rotation={-10 * key} />
         ))}
     </div>;
 };
