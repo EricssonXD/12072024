@@ -46,15 +46,15 @@ export const PhotoCard = ({
         return (
             <motion.div className={classNames(styles.root, className)}
                 style={{
-                    overflow: "hidden",
                     padding: dimension / 20,
                     // transform: "translate(-50%, -50%)",
-                    zIndex: zIndex,
                 }}
                 initial={{
-                    scale: 0,
+                    scale: 1,
                     x: "calc(50vw - 100px)",
-                    y: "80vh",
+                    y: "1080",
+                    transformOrigin: "0px 300px",
+                    // zIndex: ,
                 }}
                 animate={appState.presentOpened ?
                     {
@@ -64,6 +64,7 @@ export const PhotoCard = ({
                         y: "calc(100vh - 600px)",
                         scale: 1,
                         rotate: rotation,
+                        // zIndex: zIndex + 10,
                     }
                     : {}}
                 transition={{
