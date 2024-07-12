@@ -9,7 +9,7 @@ export const Blessings: Array<{ name: string, message: string }> = [
     },
     {
         name: '澤安',
-        message: '祝你40歲生日快樂，希望你喺傳道人呢條路上行得越嚟越遠，\n希望你可以繼續傳揚神嘅話語繼續去發揮你喺基督裏嘅作用同恩賜☺️'
+        message: '祝你40歲生日快樂，希望你喺傳道人呢條路上行得越嚟越遠，\n希望你可以繼續傳揚神嘅話語繼續去發揮你喺基督裏嘅作用同恩賜😊'
     },
     {
         name: '阿Rain',
@@ -29,7 +29,7 @@ export const Blessings: Array<{ name: string, message: string }> = [
     },
     {
         name: 'Rainbow 焯烯',
-        message: '生日快樂🥳多謝你呢幾日嘅照顧同埋教導我哋更多短宣嘅知識，希望你今日同屋企人enjoy today。'
+        message: '生日快樂🥳\n多謝你呢幾日嘅照顧同埋教導我哋更多短宣嘅知識，希望你今日同屋企人enjoy today。'
     },
     {
         name: '柏臻',
@@ -46,5 +46,13 @@ export const Blessings: Array<{ name: string, message: string }> = [
     {
         name: '溢睛',
         message: '生日快樂呀！！！\n很感恩在呢個短宣中認識你\n在你身上我學會了很多\n以馬內利，願下次再係台灣見到你！！'
+    },
+    {
+        name: '周昊',
+        message: '雖然我地淨係識咗好短嘅時間，但已經好feel到你對嘅熱誠。多謝你，冇咗你呢個短宣都唔會搞得成。肥仔生日快樂🎂'
+    },
+    {
+        name: '凱欣',
+        message: '肥仔生日快樂～好高興有你帶我哋嚟台灣短宣，雖然認識你嘅時間唔長，但都感受到你係一個好有心嘅牧者，感恩今次認識你，希望以後都會有機會見面😎'
     },
 ]
